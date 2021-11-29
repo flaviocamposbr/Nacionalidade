@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body {
+            background-color: teal;
+            color: white;
+        }
+        input#tex {
+            margin-top: 20px;
+        }        
+    </style>
+</head>
+<body>
+    <h1>Brasileiro ou Estrangeiro?</h1>
+    <p1>Será que você é Brasileiro mesmo? Teste agora...</p1> </br>
+    Em que país você nasceu? <input type="text" name="texto" id="tex">
+    <input type="button" value="Verificar" onclick = calcular()>
+    <div id = nac></div>
+
+<script> 
+        function calcular(){
+            var n1 = document.querySelector('input#tex')
+            var n2 = document.getElementById ('nac')
+            var res = (n1.value)
+            n2.innerHTML = ''
+            if (res == 'Brasil') {
+                n2.innerHTML = 'Você realmente é Brasileiro'
+            } else {
+                n2.innerHTML = 'Você é Estrangeiro, que nasceu fora do Brasil'
+            }
+        }
+</script>
+</body>
+</html>
